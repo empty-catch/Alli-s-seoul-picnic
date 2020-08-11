@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.emptycatch.unitylibrary": {
+      "version": "https://github.com/Komorio/Unity-Library.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "8ff3819876e854eb585ff66859ca42b485d96e4f"
+    },
     "com.unity.2d.animation": {
       "version": "4.2.4",
       "depth": 0,
