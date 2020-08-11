@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb6fbd94e22eb44ca25a978e96570eb, type: 3}
+  m_Name: Line No.4
+  m_EditorClassIdentifier: 
+  lineNumber: 4
+  lineColor: {r: 0.17254902, g: 0.61960787, b: 0.87058824, a: 1}
+  answer: 1
+  stations:
+  - "\uB3D9\uC791"
+  - "\uC774\uCD0C"
+  - "\uC2E0\uC6A9\uC0B0"
+  - "\uC0BC\uAC01\uC9C0"
+  - "\uC219\uB300\uC785\uAD6C"
+  - "\uC11C\uC6B8\uC5ED"
+  examples:
+  - "\uB4F1\uCD0C"
+  - "\uCDA9\uBB34\uB85C"
+  - "\uAD50\uB300"
+  - "\uC774\uCD0C"
+  - "\uD61C\uD654"
