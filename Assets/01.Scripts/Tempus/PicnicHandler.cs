@@ -116,7 +116,6 @@ public class PicnicHandler : MonoBehaviour
 
         for (int current = 1; current <= picnicCount; current++)
         {
-            isCurrect = false;
             info = infos[Random.Range(0, infos.Length)];
             successInfos.Add(info);
 
@@ -202,6 +201,7 @@ public class PicnicHandler : MonoBehaviour
                     }
                 }
 
+                isCurrect = false;
                 yield return new WaitUntil(() => isCurrect);
             }
             answer.SetActive(false);
