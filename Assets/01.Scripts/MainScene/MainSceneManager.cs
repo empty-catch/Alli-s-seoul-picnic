@@ -19,9 +19,10 @@ public class MainSceneManager : MonoBehaviour
 
     private bool exitTitle;
     private bool tutorialing;
-    
+
     private void Start(){
-        if(PlayerPrefs.GetInt("Retry",0) == 1){
+        if(PlayerPrefs.GetInt("Retry", 0) == 1){
+            PlayerPrefs.SetInt("Retry", 0);
             OpenStageGroup();
         } else {
             OpenTitleGroup();
@@ -32,7 +33,7 @@ public class MainSceneManager : MonoBehaviour
         titleGroup.gameObject.SetActive(true);
         if(exitTitle){
             Tween openTween = stageGroup.DOFade(0.0f, 0.25f);
-            
+
             openTween.OnComplete(() => {
                 stageGroup.gameObject.SetActive(false);
                 titleGroup.DOFade(1.0f, 0.25f);
@@ -63,7 +64,7 @@ public class MainSceneManager : MonoBehaviour
             stageGroup.gameObject.SetActive(true);
             stageGroup.DOFade(1.0f, 0.25f);
         });
-    }   
+    }
 
     public void GameStart(){
         SceneManager.LoadScene("Game");
