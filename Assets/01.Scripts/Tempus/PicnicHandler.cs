@@ -1,5 +1,6 @@
 ﻿#pragma warning disable CS0649
 
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -113,11 +114,22 @@ public class PicnicHandler : MonoBehaviour
     private IEnumerator Start()
     {
         int picnicCount = PlayerPrefs.GetInt("Difficulty", 3);
+        int lastInfoIndex = -1;
+        List<int> infoIndices = null;
 
         for (int current = 1; current <= picnicCount; current++)
         {
-            info = infos[Random.Range(0, infos.Length)];
+            if (infoIndices == null || infoIndices.Count == 0)
+            {
+                infoIndices = Enumerable.Range(0, infos.Length)
+                             .OrderBy(_ => Random.Range(0, infos.Length))
+                             .SkipWhile(key => key == lastInfoIndex).ToList();
+            }
+
+            lastInfoIndex = infoIndices[infoIndices.Count - 1];
+            info = infos[lastInfoIndex];
             successInfos.Add(info);
+            infoIndices.RemoveAt(lastInfoIndex);
 
             subtitle.SetActive(true);
             {
