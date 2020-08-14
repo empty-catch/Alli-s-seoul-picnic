@@ -129,7 +129,7 @@ public class PicnicHandler : MonoBehaviour
             lastInfoIndex = infoIndices[infoIndices.Count - 1];
             info = infos[lastInfoIndex];
             successInfos.Add(info);
-            infoIndices.RemoveAt(lastInfoIndex);
+            infoIndices.RemoveAt(infoIndices.Count - 1);
 
             subtitle.SetActive(true);
             {
