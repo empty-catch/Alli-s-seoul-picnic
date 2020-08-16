@@ -55,4 +55,9 @@ public class StageButton : MonoBehaviour
             item.DownScale();
         });
     }
+
+    private void OnDestroy(){
+        StageButton.stageButtons.Clear();
+        StageButton.selectButton = null;
+    }
 }
